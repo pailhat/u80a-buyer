@@ -238,7 +238,8 @@ driver.quit()
 
 
 """
-# Returns the url for a product that we're looking for on the shopify powered site if the product is live
+# Returns the url for the product that we're looking for on the shopify powered site if the product is live 
+# (Not used since we knew the url of the u80a-seq1 extra posting beforehand, but could be useful if you're expecting a product that hasn't been published yet)
 def checkAvailablity():
     r = requests.get('https://ramaworks.store/products.json')
     products = json.loads((r.text))['products']
